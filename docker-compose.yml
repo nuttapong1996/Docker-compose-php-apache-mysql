@@ -1,34 +1,41 @@
 version: '3.8'
 services:
-  php-apache-environment:
+ # Apache webserver service
+  apache-server:
     container_name: php-apache
     build: 
+# Dockerfile path
       context: .
       dockerfile: Dockerfile
     depends_on:
-      - db
+      - mysqldb
+    restart: always 
     volumes:
+  # Mount the local ./php/htdocs directory to /var/www/html in the container
       - ./php/htdocs:/var/www/html/
+  # Map port 8089 on the host to port 80 on the container 
     ports:
       - 8089:80
-  db:
-    container_name: db
+# Mysql database services
+  mysqldb:
+    container_name: mysqldb
     image: mysql
     restart: always
     environment:
+  # Mysql database Username and Password
       MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
       MYSQL_DATABASE: MYSQL_DATABASE
       MYSQL_USER: MYSQL_USER
       MYSQL_PASSWORD: MYSQL_PASSWORD
     ports:
       - "9906:3306"
+# Phpmyadmin
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
       - "8000:80"
     restart: always
     environment:
-      PMA_HOST: db
+      PMA_HOST: mysqldb
     depends_on:
-      - db
-      
+      - mysqldb
