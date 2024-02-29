@@ -2,7 +2,7 @@
 FROM php:8.0-apache
 
 #เซ็ตพื้นที่ทำงาน
-WORKDIR /php/src
+WORKDIR /php/htdocs
 
 #ติดตั้ง Mysqli 
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
