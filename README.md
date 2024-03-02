@@ -1,4 +1,4 @@
-#Docker compose Php8 Apache 2.4 with Mysql and PhpMyAdmin
+<h2>Docker compose Php8 Apache 2.4 with Mysql and PhpMyAdmin</h2>
 <p>include with </p>
 <ul>
 <li>Php 8.0</li>
