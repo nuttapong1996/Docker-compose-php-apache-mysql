@@ -15,6 +15,15 @@
   <li>Mysqli PDO</li>
   <li>Postgrest PDO</li>
 </ul>
+<hr>
+<h3>Setup</h5>
+<ul>
+  <li>1.Install Docker Desktop</li>
+  <li>2.Download this repositories</li>
+  <li>3.Extract and pase in some folder Eg: c:\php-apache</li>
+  <li>4.Open Command prompt and navigate to extracted location with cd command Eg: cd\ c:\php-apache</li>
+  <li>5.use command "docker-compose up --build -d" to build container</li>
+</ul>
 
 <h5>Reference</h5>
 <p><b><a href="https://youtu.be/hCKoWTrXVh0?si=ijL8sU8y1HaTUSS4">สอนติดตั้ง PHP Apache MySQL ด้วย Docker | เครื่องมือสุดเทพที่ Dev ควรใช้</a></b></p>
