@@ -7,7 +7,14 @@ WORKDIR /php/htdocs
 #เปิดการใช้งาน .httaccess
 RUN a2enmod rewrite
 
-#ติดตั้ง Mysqli 
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
-#ติดตั้ง Extension ของ Postgrest
+#เปิดการใช้งาน Database Driver Mysqli
+RUN docker-php-ext-install mysqli 
+# เปิดการใช้งาน Database Driver PDO mysql
+RUN docker-php-ext-install pdo pdo_mysql
+#เปิดการใช้งาน Mysqli
+RUN docker-php-ext-enable mysqli 
+# เปิดการใช้งาน Database Driver pgsql และ pdo pgsql
 RUN apt-get update && apt-get install -y libpq-dev && docker-php-ext-install pdo pdo_pgsql pgsql
+
+# COPY ไฟล์ทั้งหมดไป 
+# COPY . /var/www/html
