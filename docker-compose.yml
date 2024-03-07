@@ -23,12 +23,12 @@ services:
     restart: always
     environment:
   # Mysql database Username and Password
-      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD #Change root password here
+      MYSQL_ROOT_PASSWORD: Itmmsq@1
       MYSQL_DATABASE: MYSQL_DATABASE
       MYSQL_USER: MYSQL_USER
-      MYSQL_PASSWORD: MYSQL_PASSWORD #Change mysql password here
+      MYSQL_PASSWORD: Itmmsq@1
     ports:
-      - "3306:3306"
+      - "9906:3306"
 # Phpmyadmin
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
