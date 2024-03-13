@@ -31,6 +31,7 @@ services:
       - "9906:3306"
 # Phpmyadmin
   phpmyadmin:
+    container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin
     ports:
       - "8000:80"
