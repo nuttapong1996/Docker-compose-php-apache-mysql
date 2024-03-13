@@ -23,10 +23,10 @@ services:
     restart: always
     environment:
   # Mysql database Username and Password
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password #อย่าลืมเปลี่ยนรหัสผ่าน
       MYSQL_DATABASE: MYSQL_DATABASE
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_USER: user #อย่าลืมเปลี่ยน username
+      MYSQL_PASSWORD: password #อย่าลืมเปลี่ยนรหัสผ่าน
     ports:
       - "9906:3306"
 # Phpmyadmin
