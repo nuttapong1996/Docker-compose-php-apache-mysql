@@ -21,8 +21,9 @@
   <li>1.Install Docker Desktop</li>
   <li>2.Download this repositories</li>
   <li>3.Extract and pase in some folder Eg: c:\php-apache</li>
-  <li>4.Open Command prompt and navigate to extracted location with cd command Eg: cd\ c:\php-apache</li>
-  <li>5.use command "docker-compose up --build -d" to build container</li>
+  <li>4.Edit Mysql Username and Password in docker-compose.yml</li>
+  <li>5.Open Command prompt and navigate to extracted location with cd command Eg: cd\ c:\php-apache</li>
+  <li>6.use command "docker-compose up --build -d" to build container</li>
 </ul>
 
 <h5>Reference</h5>
